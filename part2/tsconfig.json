@@ -1,0 +1,66 @@
+{
+//用来指定那些ts文件需要被编译
+//路径**表示任意目录
+//    * 表示任意文件
+    "include": [
+       "./src/**/*"
+    ],
+    //对不编译的文件hello进行排除
+    "exclude": [
+        "./src/hello/**/*"
+    ],
+    //定义继承的配置文件，类似与引用
+    // "extends": "./configs/base",
+    //对指定的文件进行编译，只有需要编译的文件才会遇到
+    // "files": [
+    //     "hello.ts",
+    //     "index.ts",
+    // ]
+  
+    //编译的选项
+    "compilerOptions": {
+        //target 用来指定ts被编译为ES的版本
+        "target": "ES6",
+        //module 指定要使用的模块化的规范
+        // "module": "ES2015",
+        //用来 指定项目中要使用的库
+        // "lib": ["dom"]
+        
+        //outDir  用来指定编译后的文件所在的目录
+        "outDir": "./dist",
+
+        //将编译的代码合并一个文件app.js当中
+        // "outFile": "./dist/app.js"
+
+        //是否对js文件进行编译，默认是false
+       "allowJs": false,
+
+       //是否检查js代码是否符合规范，默认值是false
+       "checkJs": false,
+
+       //是否移除注释，默认是false,编译不会对注释进行编译
+       "removeComments": false,
+
+       // 不生成编译后的文件,执行过程，但是不编译文件
+       "noEmit": true,
+
+       //当有错误时不生成编译后的文件
+       "noEmitOnError": true,
+
+       //默认情况下不是严格模式，true开启，设置编译后的文件时严格模式"use strict"
+       "alwaysStrict": false,
+
+       //不允许隐式的any类型(不推荐使用)
+       "noImplicitAny": true,
+
+       //不允许不明确的this
+       "noImplicitThis": false,
+
+       //严格检查空值,默认不检查，true就是严格检查
+       "strictNullChecks": false,
+
+       //严格检查总开关
+       "strict":true
+
+    } 
+}
